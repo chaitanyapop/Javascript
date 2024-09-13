@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function hello()
+        {
+            console.log("Before await")
+            let a= true
+            if(a===true)
+            {
+                const res= await add()
+                console.log(res)
+                console.log("after await 1")
+                return res
+
+            }
+            else
+            {
+                throw Error ("Value of a is not true")
+            }
+        }
+        function add()
+        {
+            let a=20
+            let b=30
+            let c= a+b
+            return c
+        }
+        let b=hello()
+        //console.log(b) // in this it will show a promise in console window. To handle return data from
+        //an async function we need to use .then() and .catch() methods
+        console.log(b).catch(console.error).then((data1)=>
+        console.log(data1))
+        /*.then() has arrow function and it has data1 present in it. This data belongs to the value return by the async function*/
+    </script>
+</body>
+</html>

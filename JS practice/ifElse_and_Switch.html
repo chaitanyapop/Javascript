@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //......................Types of variable declaration........................................
+        //var a= 10
+        //{
+          //  var a=20
+            //console.log(a)
+        //}
+        //console.log(a)// var has the global scope so if we create same variable again it will replace the value of initial one
+        //let a=20// here it is global
+        //{
+          //  let a=10 // scope limited to block
+            //console.log(a)// a=10
+
+        //}
+//................... prac diff between let and var.......................
+/*var a= 20;
+if(a>15)
+{
+  var a=30;// it has modified the same variable a here
+  console.log(a);
+} 
+console.log(a);*/ // O/p: 30 30
+/*let a=20;
+if(a>15)
+{
+  let a=40;// here it has not modified the previous 'a' value instead it has created a new 'a' variable
+  // whose scope is limited to if block only
+  console.log(a)
+}
+console.log(a);*/ // O/P: 40 20
+//....................................................................................
+        //console.log(a)// a=20
+        // scope of let is limited to block
+        /*basic difference between var and let is, var is for global scope and let is used when the scope is limited to block
+        benifit of let is that inside the block we can create same variable again and it will not affect the global variable which also
+        has same name*/
+        
+        //const a="This will not change"// const is used to declare constant variable
+        //console.log(a)
+        //a="hello"// here we will get the error because we cannot change the constant
+        //...................................................................................................
+        //................................Conditions.........................................................
+        /*let a=16    
+        if(a<18)
+        {
+            console.log("You cannot vote")
+        }
+        else if(a>=18)
+        {
+            console.log("You can vote")
+        }*/
+        /*let a=3;
+        switch(a)
+        {
+            case 1:
+                console.log("Value is one")
+                break
+            case 2:
+                console.log("Value is two")
+                break;
+            case 3:
+                console.log("Value is three")
+                break;
+            case 4:
+                console.log("value is four")
+                break;
+            case 5:
+                console.log("Value is five")
+                break;
+        }*/
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*what is async and await?
+        async function always returns the promises and the resolved promise we have to see into the .then() function
+        and 'await' keyword says that 'I need some time to execute till then u carry with next process'
+        in our example at response when it sees await it goes out of the function for new task and after completing everythhing
+        it returns back to it and then console.log("after await") executes
+        so using asynchronous functions it becomes easy to run program without wasting time for the response of huge functions*/
+       /* async function name() {
+            console.log("this is before await")
+            const response=await fetch('https://api.github.com/users') // fetch is used to fetch information from website in terms on json or html
+            // we can do fetch request to those websites whose response is in json or xml, above website is giving response
+            console.log("after await")
+            const response_json= await response.json();
+            console.log("this is after response_json")
+            throw new Error// this error is handled by .catch() block
+            // when function returns error it is handeled by catch block and if it is returning correct then it is 
+            // handled by .then() block
+            return "Hello"
+
+        }
+        const prom=name()
+        prom.then((data)=>{
+            console.log(data)
+        })*/
+        async function thisThrows() {
+    throw new Error("Thrown from thisThrows()");
+}
+
+thisThrows()
+    
+    .then(() => console.log('We do cleanup here'))
+    .catch(console.error); // whenever any error comes it gets caught here
+
+// Output:
+// Error: Thrown from thisThrows()
+//   ...stacktrace
+// We do cleanup here
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class='first'>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, minus architecto, asperiores praesentium in soluta minima quis fuga ea fugiat quidem tempore? Perferendis iure est quia ex aut atque quibusdam.</p>
+    </div>
+    <script>
+        // ...............................COMPLETE STRING FUNCTIONALITIES.................................................
+        var firstname='Chaitanya'//(-9  ,-8,-7,-6,-5,-4,-3,-2,-1)
+        var secondname="Nitin"
+        var surname='Parandkar'
+        var total=firstname+secondname+surname
+        var len= total.length
+        console.log(`firstname is ${firstname}, secondname is ${secondname}, surname is ${surname}`)
+        console.log(`length of string is ${len}`)
+
+        //substring from string
+        var substr1= firstname.slice(-4,-1) // 1 to 4 means 1,2,3
+        var substr2= firstname.substring(2,7)
+        // difference between substring and slice is that, slice can take negative values also
+        console.log(substr1)
+        console.log(substr2)
+        var substr3= firstname.substr(0,4)//(start post, how many characters)
+        // in substr function the first argument is start location and including start location value how many values we want in total
+        // is the second argument eg. start at 1 and total 4 characters
+        console.log(substr3)
+
+        // replacing character
+        var replaced= total.replace('Chaitanya','Chai') // in string Chaitanya is replaced by Chai
+        console.log(total)
+        console.log(replaced)
+
+
+        //Uppercase and lowercase
+        console.log(firstname.toUpperCase())
+        console.log(surname.toLowerCase())
+
+        //Trim function to remove white spaces
+        var trimFuc="     hello      world    "
+        console.log(trimFuc)
+        console.log(trimFuc.trim())
+        // trim function will remove the white spaces which are at starting position and at the ending position
+        // spaces which are in brtween will not get trimmed
+        
+        //charat FUNCTION
+        console.log(firstname.charAt(5))
+        // charAt function gives character present at the location mentioned and it starts from 0 index
+    </script>
+</body>
+</html>

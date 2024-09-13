@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button{
+            padding: 10px 20px;
+            margin-top: 0px;
+        }
+        #ans{
+            padding: 1px 2px; 
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="container">
+        <input id="first" placeholder="first_num">
+        <input id="second" placeholder="second_num">
+        <button value="add" id="button" onclick="add()">Add</button>
+        <textarea id="ans"></textarea>
+        <p id="firstpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quasi neque sit facere ex qui quaerat minus perspiciatis corporis, esse animi! Excepturi facere dicta esse libero quos dolorum consequuntur cumque! Labore illo itaque facere officiis ipsa aliquid sed ea aliquam corrupti commodi. Quasi accusamus dicta doloribus sit reiciendis magnam sapiente, deleniti eveniet quisquam iusto dolor repudiandae beatae quos ex aut dolorum nulla facere quidem eius. Facere tempore excepturi qui, odio, aspernatur, quia velit amet nobis quaerat ipsa et unde accusamus temporibus magni dolore facilis sapiente minima. Atque repellendus rerum corrupti consequuntur, quaerat quis in. Soluta quod explicabo rem nihil earum delectus amet numquam esse perspiciatis quis officiis placeat temporibus sint dolorem ad dolor, maiores maxime magnam ipsa. Earum quisquam ut animi delectus non, eum cum, aliquid accusantium aspernatur ab cupiditate sapiente magni tempora voluptatibus repudiandae dolorum aperiam? Veritatis ipsam necessitatibus cupiditate reprehenderit architecto, deleniti laudantium laboriosam nostrum quidem modi dolorum numquam eligendi ullam expedita rem, inventore quam eaque quod reiciendis deserunt. Reprehenderit error accusantium minima exercitationem laudantium quaerat tempora non ea quas commodi dolore nisi molestias quia deserunt vero tempore a facere molestiae fugit eaque odit, dolorem ducimus perferendis! Eum blanditiis dicta optio assumenda dolores at ut velit! Accusantium officia velit temporibus fuga inventore ipsam, numquam repellat soluta quod dolore architecto illum culpa? Consectetur laborum cum optio sint odit ipsam autem atque reprehenderit excepturi fuga. Rem consectetur, hic ex debitis ut aliquam quia!</p>
+    </div>
+    <div class="container">
+        <p id="firstpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quasi neque sit facere ex qui quaerat minus perspiciatis corporis, esse animi! Excepturi facere dicta esse libero quos dolorum consequuntur cumque! Labore illo itaque facere officiis ipsa aliquid sed ea aliquam corrupti commodi. Quasi accusamus dicta doloribus sit reiciendis magnam sapiente, deleniti eveniet quisquam iusto dolor repudiandae beatae quos ex aut dolorum nulla facere quidem eius. Facere tempore excepturi qui, odio, aspernatur, quia velit amet nobis quaerat ipsa et unde accusamus temporibus magni dolore facilis sapiente minima. Atque repellendus rerum corrupti consequuntur, quaerat quis in. Soluta quod explicabo rem nihil earum delectus amet numquam esse perspiciatis quis officiis placeat temporibus sint dolorem ad dolor, maiores maxime magnam ipsa. Earum quisquam ut animi delectus non, eum cum, aliquid accusantium aspernatur ab cupiditate sapiente magni tempora voluptatibus repudiandae dolorum aperiam? Veritatis ipsam necessitatibus cupiditate reprehenderit architecto, deleniti laudantium laboriosam nostrum quidem modi dolorum numquam eligendi ullam expedita rem, inventore quam eaque quod reiciendis deserunt. Reprehenderit error accusantium minima exercitationem laudantium quaerat tempora non ea quas commodi dolore nisi molestias quia deserunt vero tempore a facere molestiae fugit eaque odit, dolorem ducimus perferendis! Eum blanditiis dicta optio assumenda dolores at ut velit! Accusantium officia velit temporibus fuga inventore ipsam, numquam repellat soluta quod dolore architecto illum culpa? Consectetur laborum cum optio sint odit ipsam autem atque reprehenderit excepturi fuga. Rem consectetur, hic ex debitis ut aliquam quia!</p>
+
+    </div>
+    <script>
+        function add() // after clicking add execute this function
+        {
+            let a=parseInt(document.getElementById("first").value)// here we are getting element by ID,
+            let b=parseInt(document.getElementById("second").value)// parsing is req because data which we are getting is in form on string
+            let c=a+b
+            document.getElementById("ans").innerHTML=c
+            document.getElementById("body").style.backgroundColor="red" // this is how you can change css
+        }
+        let par=document.getElementById("firstpara") // here we are getting complete DOM of that tag
+        par.addEventListener('mouseover', function run(){// when mouseover event occurs execute this function
+            // now mouseover, mouseout these are events and there are many events which we can listen
+            //we can create addeventlistener or we can write it in html DOM only like, onmouseover, onmouseout etc....
+            console.log("mouse over para")
+        })
+        par.addEventListener("mouseout",function run(){
+            console.log("mouse is outside")
+        })
+        //we can get element by class name
+            // using 'getElementsByClassName()'
+        let containers=document.getElementsByClassName("container")
+        console.log(containers) // here we have two classes named conatiner, so 'getElementsByClassName' will return an array of both
+        // class elements, If we want to select one then we have to use 'containers[0]' to get first element and so on..
+        console.log(containers[0]) // this will give first class
+        console.log(containers[1])// this will give second class
+        // to access HTML present inside the class such as all the tags and everything then we have to use innerHtml to access it
+
+        //......qureyselector, this is mainly used to access the CSS elements in the DOM 
+        let sel=document.querySelector(".container")// this will return first element which has class name container
+        // now instead of '.container' we can use '#Id_name' and other CSS selectors also
+        // to select all CSS elements we use 'querySelectorAll'
+        let sel1=document.querySelectorAll(".container")
+        
+
+
+    </script>
+    
+</body>
+</html>

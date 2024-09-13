@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a= () => {
+            console.log("this is arrow function")
+        }
+        a();
+        let sum=(c,d)=>{ //this is the arrow function which helps us to write function in shortcuts
+            return c+d
+        }
+        console.log(sum(30,40))
+        let obj1={
+            greetings: "good morning",
+            name: ["chaitanya","chai","max"],
+            greet()//creating function called 'greet'
+            {
+                this.name.forEach((i)=>{// i means this.name ka har ek element
+                    let greetings="hi";
+                    console.log(this.greetings+" "+"hello"+" "+i)
+                    console.log(greetings);
+                })
+                /*this.greetings will point to the greeting which is present inside the Object this is because of arrow function
+                this.greetings is present inside a function so its scope should be inside that function only 
+                but in arrow function it does not have 'this'in its scope therefore it points to its parent. In normal function
+                it will point within it self it will not go to parent
+                
+                'this' will go for a global scope and only variable name will look for local scope*/
+            }
+        }
+        obj1.greet()
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // javascript object is called JSON(Javascript object notation)
+        const students=[{name:"harry"},{name:"rohan"}]// object inside an array
+        console.log(typeof(students[0]))
+        console.log(students)
+        let obj1={
+            name:"chaitanya",
+            company:"mindtree",
+            occupation:"Engineer"
+        }
+        console.log(obj1)
+        // now to transfer the data over network or to other classes we have to conver JS object to string
+        let myJsonStr=JSON.stringify(obj1)// whatever data we get from the server it is in the form of JSON to perofrom action on that
+        // data we need to convert it to String
+        // now object is converted to String now we can perform all String operations on it.
+        console.log(myJsonStr)
+        console.log(myJsonStr.substr(1,4))
+        // now to convert back to the Object
+        let objJsonConvert=JSON.parse(myJsonStr)// converting back to object
+        console.log(objJsonConvert)
+        //JSON = javascript object notation ie. Object of Javascript 
+
+    </script>
+</body>
+</html>

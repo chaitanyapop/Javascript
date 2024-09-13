@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //..........for loop...............
+        let a=[1,2,3,4]
+        //for(let i=0;i<a.length;i++)
+        //{
+          //  console.log(a[i])
+        //}
+        //..........for each loop...........
+        /*a.forEach(function a_fun(elements)
+        {
+            console.log("a array has elements"+elements)
+            /*"a.forEach" means run this loop for each element of array. for each element of an array run the function which is present
+            inside now this function will accept an argument and these arguments means the content of an array
+        })*/
+        //...............for of loop..........
+        /*for(i of a)
+        {
+            console.log("value of element is "+i)
+            /*'i' will contain the each element present in array called 'a'
+        }*/
+        //.....now we want to iterate through the object then will use 'for in' loop........
+        let obj=
+        {
+            firstname:"Chai",
+            age:"21",
+            surname:"Parandkar"
+        }
+        for(key in obj) // to access keys in object 'key' keyword is used. This loop will run for each Key present in Object
+        {
+            console.log(`the key is ${key} and its value is ${obj[key]}`)
+        }
+        // while and do while, remains same
+
+    </script>
+</body>
+</html>

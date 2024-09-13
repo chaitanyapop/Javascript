@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const students=[{name:"chaitanya",age:"21"}]
+        //promises has two callbacks, resolve and reject
+        function add_stu(student){//this function has made promise
+            return new Promise(function (resolve,reject) {// function has made promise to add student either it will full fill the promise(resolve)
+                //or not (reject) 
+                students.push(student)
+                const bool=false // here true and false is selected according to task
+                //eg. in http req if we get statuscode 200 then will set true and after true will call resolve method which will execute
+                //content inside the .then() section and if status code is not 200 then will set false and it will call the 
+                //reject section which will run content inside .catch() method
+                if(bool===true)
+                {
+                    resolve()
+                }
+                else{
+                    reject("Students cannot be enrolled")
+                }
+
+                
+            })
+        }
+        function get_stu()
+        {
+            console.log(students)
+        }
+        let a=[{name:"xyz",age:"21"}]
+        let klm = add_stu(a) // it has promise in return a is acting like an object
+        console.log(klm)
+        //console.log(add_stu(a))
+        add_stu(a).then(function() {
+            console.log("students have been enrolled successfully")
+            get_stu()
+            
+        }).catch((error)=>{
+            console.log(error)
+        }
+        
+            
+        )
+       /* add_stu(a).then(()=>{
+            console.log("hello")
+        })*/
+
+    </script>
+</body>
+</html>

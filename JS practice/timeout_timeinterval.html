@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hello(name)
+        {
+            console.log("Hello world"+" "+name)
+        }
+        let a=setTimeout(hello, 3000,"Mike")
+        /*this is settumeout function it will allow us to execute function after few seconds of time
+        we can define the function in the place of hello, by using arrow function
+        like this-
+        setTimeout(()=>{// after some delay this will execute JS concepts learn it in JS.
+            console.log("Owner is busy please wait...")
+        },3000);*/
+        // now we want to clear out the TimeOut function inshort we want to delete it then use clearTimeOut function
+        // now 'a' variable will contain an unique ID for setTimeOut function which we can use while clearing it out
+        //clearTimeout(a)
+
+        //Like setTimeOut if we want to execute something after few intervals of time again and again then use 'setInterval' function
+        let b=setInterval(() => {
+            console.log("after 2 seconds")
+            
+        }, 2000);
+        // to clear this out we use clearTimeOut
+        clearTimeout(b)
+    </script>
+</body>
+</html>

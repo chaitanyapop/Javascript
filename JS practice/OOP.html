@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class First
+        {
+            constructor(name, age)
+            {
+                this.n= name; // name from base class
+                this.age=age; // wheel from base class
+            }
+            //whatever present in constructor will act like an global variable of that class
+            occupation(role)
+            {
+                console.log("Name of candidate is"+" "+this.n+"candidate age is"+" "+this.age+"and occupation is"+" "+role)
+            }
+        }
+        class Second extends First
+        {
+            constructor(wheels, name)
+            {
+                super(name, wheels)
+            }
+            new_meth()
+            {
+                console.log(this.n+"is"+this.age)//"this" refers to an object
+            }
+        }
+        let obj1=new First("chaitanya",21)
+        let obj2=new Second(4,"suzuki")
+        obj2.new_meth()
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("This site is for voting eligiblity")// this returns undefined
+        var a=confirm("Do you really want to vote?")// this returns boolean value
+        /*'Confirm' has OK and CANCEL option OK is equivalent to TRUE and CANCEL is equivalent to FALSE*/
+        if(a==true)
+        {
+            let a= prompt("Enter your age") // prompt will come where we can enter the value
+            if(a>=18)
+            {
+                console.log("Eligible to vote")
+
+            }
+            else{
+                console.log("you are not eligible")
+            }
+        }
+        else{
+            console.log("You are not casting your vote")
+        }
+
+    </script>
+</body>
+</html>
